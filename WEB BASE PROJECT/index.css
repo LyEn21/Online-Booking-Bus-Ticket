@@ -1,0 +1,95 @@
+/* Reset default margin and padding */
+body, h1, h2, p,form {
+    margin: 0;
+    padding: 0;
+    background-image: url('Background1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  }
+
+  label {
+
+  }
+  
+  /* Basic styling for header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+  }
+  
+  .logo img {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .top-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .buttons button {
+    margin-left: 250px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Styling for main content */
+  main {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  form1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  select, input[type="date"], button {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+
+  /* Styling for footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+ }
+  

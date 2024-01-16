@@ -1,0 +1,99 @@
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li, form, button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Basic styling for header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+  }
+  
+  .logo {
+    width: 85px; /* Adjust as needed */
+    height: 85px; /* Maintain aspect ratio */
+  }
+body{
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+  
+  /* Styling for main content */
+  main {
+    width: 60%;
+    margin: 30px auto;
+  }
+  
+  /* Styling for user profile section */
+  .user-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+ /* Styling for main content */
+  main {
+    width: 50%;
+    margin: 20px auto;
+   font-family: 'Times New Roman', sans-serif; /* Change font family */
+    color: #333; /* Set the text color */
+
+  }
+  .user-info h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size:30px;
+    
+  }
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+  
+  .info {
+    margin-bottom: 20px;
+  }
+  
+  .info p {
+    margin-bottom: 10px;
+  }
+  
+  .actions button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #555;
+  }
+  
+  /* Styling for footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+ }

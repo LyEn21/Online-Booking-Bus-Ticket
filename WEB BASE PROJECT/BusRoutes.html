@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Routes</title>
+  <!-- Link your CSS stylesheet -->
+  <link rel="stylesheet" href="BusRoutes.css">
+</head>
+<body>
+  <header>
+    <!-- Logo and navigation buttons -->
+    <div class="logo">
+      <img src="Logo ALA.jpeg" class="img.circle" alt="Logo">
+    </div>
+    <div class="top-buttons">
+      <a href="Profile.html">
+        <button>Profile</button>
+      </a>
+      <a href="About_Us.html">
+        <button>About Us</button>
+      </a>
+    </div>
+  </header>
+    <!-- ... -->
+  </header>
+
+  <main>
+    <h1>Available Bus Routes</h1>
+    <div class="bus-list">
+      <div class="bus-item">
+        <h2>Bus 1</h2>
+        <p>Time: 09:00 AM</p>
+        <p>Price: RM20</p>
+        <button onclick="selectBus('Bus 1', '09:00 AM', 'RM20')">Select</button>
+      </div>
+	  
+	  <div class="bus-list1">
+      <div class="bus-item1">
+        <h2>Bus 2</h2>
+        <p>Time: 10:00 AM</p>
+        <p>Price: RM20</p>
+        <button onclick="selectBus('Bus 2', '10:00 AM', 'RM20')">Select</button>
+		</div>
+		
+		<div class="bus-list2">
+      <div class="bus-item2">
+        <h2>Bus 3</h2>
+        <p>Time: 11:00 AM</p>
+        <p>Price: RM18</p>
+        <button onclick="selectBus('Bus 1', '09:00 AM', 'RM20')">Select</button>
+      <!-- Add more bus items as needed -->
+    </div>
+
+  </main>
+  <div class="buttons-container" >
+      <button onclick="redirectToindex()">Back</button>
+      <button onclick="redirectToChooseSeat()">Next</button>
+    </div>
+   	
+  <div class="footer">
+  <p>@A.L.A BUS Sdn Bhd</p>
+  </div>
+
+  <!-- Link your JavaScript file -->
+  <script>
+    function selectBus(busName, time, price) {
+    // Store selected bus details (you can use localStorage or session storage)
+    // For example:
+    localStorage.setItem('selectedBus', busName);
+    localStorage.setItem('selectedTime', time);
+    localStorage.setItem('selectedPrice', price);
+  }
+  
+  // Redirect to Choose Seat page
+  function redirectToindex() {
+    // Redirect to choose_seat.html
+    window.location.href = 'index.html';
+  }
+  function redirectToChooseSeat() {
+    // Redirect to choose_seat.html
+    window.location.href = 'ChooseSeat.html';
+  }
+  </script>
+</body>
+</html>

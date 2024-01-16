@@ -1,0 +1,169 @@
+/* Reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+background-image: url("Background1.jpg");
+background-repeat: no-repeat;
+  background-attachment: fixed; 
+background-size: 100% 100%;
+}
+
+h2, p, ul, li, form, button {
+margin: 0;
+  padding: 0;
+}
+
+ h1{
+margin: center;
+  padding: 0;
+font-family: Tahoma, Verdana, sans-serif;
+color: white;
+text-align: center;
+text-decoration: underline;
+ }
+/* Basic styling for header */
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+}
+
+.logo img {
+  width: 100px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.top-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff9800;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Styling for main content */
+main {
+position:absolute;
+top:50%;
+left:50%;
+  transform: translate(-50%,-50%);
+width:50%;
+height:50%;
+border: 3px solid orange;
+background-color: #333;	
+}
+
+/* Styling for bus items */
+.bus-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bus-item {
+  width: 210px;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+background-color: #FFA500;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.bus-item h2 {
+  margin-bottom: 5px;
+}
+
+.bus-list1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bus-item1 {
+  width: 210px;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+background-color: #FFA500;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.bus-item1 h2 {
+  margin-bottom: 5px;
+}
+
+.bus-list2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bus-item2 {
+  width: 210px;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+background-color: #FFA500;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.bus-item2 h2 {
+  margin-bottom: 5px;
+}
+
+ /* Styling for Back button */
+button {
+  background-color: #FF0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Styling for Next button */
+button {
+  background-color: #FF0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.buttons-container {
+text-align: center;
+margin-top: 10px; /* Add margin between main and buttons */
+}
+
+/* Styling for footer */
+.footer {
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: #333;
+ color: white;
+ text-align: center;
+}

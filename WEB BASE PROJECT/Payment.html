@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <title>Payment</title>
+  <!-- Link your CSS stylesheet -->
+  <link rel="stylesheet" href="Payment.css">
+</head>
+<body>
+  <header>
+  <nav>
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+   </button>
+    <img src="Logo ALA.jpeg" alt="A.L.A Bus Logo" class="logo">
+</nav>
+    <!-- ... -->
+  </header>
+
+  <main>
+  <h1>Customer Information</h1><br>
+  
+  <div class="customer">
+  <form action="Receipt.html" method="post">
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name:</label>
+    <input type="name" class="form-control" id="name" placeholder="Enter name" name="name" required>
+	</div>
+	 <div class="mb-3">
+    <label for="age" class="form-label">Age:</label>
+    <input type="age" class="form-control" id="age" placeholder="Enter age" name="age" required>
+	</div>
+	 <div class="mb-3">
+    <label for="pwd" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+    <div class="mb-3">
+    <label for="Contactnum" class="form-label">Contact number:</label>
+    <input type="Contactnum" class="form-control" id="Contactnum" placeholder="Enter Contact number" name="Contactnum" required>
+	</div>
+  </div>
+        <br><br>
+  
+    <h1>Payment Options</h1>
+    <div class="payment">
+	 <select class="form-select form-select-lg" required>
+     <option selected disabled>Payment options</option>
+     <option>Online Banking</option>
+     <option>Debit/credit card</option>
+     <option>TNG eWallet</option>
+	 <option>Grabpay</option>
+	 <option>Boost wallet</option>
+</select>
+</div>
+    </div>
+	<br>
+    <!-- Submit Button -->
+        <button type="submit" onclick="storeFormData()">Submit</button>
+		</div>
+	</form>
+
+	<script>
+    // Function to store form data in localStorage
+    function storeFormData() {
+      // Get form data
+      const formData = {
+        email: document.getElementById('email').value,
+        name: document.getElementById('name').value,
+        age: document.getElementById('age').value,
+        pswd: document.getElementById('pwd').value,
+        Contactnum: document.getElementById('Contactnum').value,
+        paymentOption: document.querySelector('.form-select').value
+      };
+
+      // Store data in localStorage
+      localStorage.setItem('formData', JSON.stringify(formData));
+    }
+  </script>
+  </main>
+
+  <script src="Payment.js"></script>
+
+  
+
+</body>
+</html>

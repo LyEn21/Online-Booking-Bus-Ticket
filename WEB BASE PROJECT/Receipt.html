@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Receipt</title>
+  <!-- Link your CSS stylesheet -->
+  <link rel="stylesheet" href="Receipt.css">
+</head>
+<body>
+  <header>
+  <nav>
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+   </button>
+    <img src="Logo ALA.jpeg" alt="A.L.A Bus Logo" class="logo">
+</nav>
+    <!-- Logo and navigation buttons (if needed) -->
+    <!-- ... -->
+  </header>
+   
+  <main>
+    <h1>Booking Receipt</h1>
+	<h3>Customer information</h3>
+	<form action="About_Us.html" method="post">
+    <div class="receipt-details" id="receiptContent">
+	</div>
+	<script>
+    // Function to display receipt content
+    function displayReceiptContent() {
+      // Retrieve form data from localStorage
+      const formData = JSON.parse(localStorage.getItem('formData'));
+
+      // Display receipt content
+      if (formData) {
+        const receiptContent = `
+          <p>Email: ${formData.email}</p>
+          <p>Name: ${formData.name}</p>
+          <p>Age: ${formData.age}</p>
+          <p>Contact Number: ${formData.Contactnum}</p>
+          <p>Payment Option: ${formData.paymentOption}</p>
+        `;
+
+        // Insert receipt content into the 'receiptContent' div
+        document.getElementById('receiptContent').innerHTML = receiptContent;
+      } else {
+        // Display an error message if form data is not available
+        document.getElementById('receiptContent').innerHTML = '<p>Error: Form data not available</p>';
+      }
+	  // Retrieve selected bus and seat details from localStorage
+      document.getElementById('busDetails').innerText = `Bus: ${localStorage.getItem('selectedBus')} | Time: ${localStorage.getItem('selectedTime')} | Price: ${localStorage.getItem('selectedPrice')}`;
+      // You'll need to adjust these IDs based on how you store seat selection data
+      document.getElementById('seatDetails').innerText = `Selected Seat: ${localStorage.getItem('selectedSeat')}`;
+    }
+	
+	function showPopUp() {
+      // Display a pop-up message when the button is clicked
+      alert('Thank you for proceeding. We will send your ticket via confirmation Email!');
+    }
+
+    // Call the function to display receipt content when the page loads
+    window.onload = displayReceiptContent;
+  </script>
+  <br>
+  <h2>Selected Bus:</h2>
+  <p id="busDetails"></p><br>
+  <h2>Selected Seat:</h2>
+  <p id="seatDetails"></p><br>
+  
+  <p1> Your booking is confirmed! Thank you for choosing A.L.A online bus booking ticket service. </p1><br>
+  <p1> Have a safe travels! </p1>
+  
+  
+  <button type="next" onclick="showPopUp()">Next</button>
+  </main>
+
+  <div class="footer">
+    <p>@A.L.A BUS Sdn Bhd</p>
+    </div>
+
+  <!-- Link your JavaScript file -->
+  <script>
+    // Retrieve selected bus and seat details from localStorage
+    document.getElementById('busDetails').innerText = `Bus: ${localStorage.getItem('selectedBus')} | Time: ${localStorage.getItem('selectedTime')} | Price: ${localStorage.getItem('selectedPrice')}`;
+    // You'll need to adjust these IDs based on how you store seat selection data
+    document.getElementById('seatDetails').innerText = `Selected Seat: ${localStorage.getItem('selectedSeat')}`;
+  </script>
+</body>
+</html>
